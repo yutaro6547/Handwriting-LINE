@@ -5,37 +5,44 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
-    
-    <android.support.v4.widget.DrawerLayout
-      android:id="@+id/drawer_layout"
+
+<android.support.v4.widget.DrawerLayout
+  android:id="@+id/drawer_layout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- content -->
+    <android.support.constraint.ConstraintLayout
       android:layout_width="match_parent"
-      android:layout_height="match_parent">
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.zukkey.handwriting_line.MainActivity">
-    
-    
-    <android.support.v7.widget.Toolbar
-      android:id="@+id/toolbar"
-      android:layout_width="368dp"
-      android:layout_height="wrap_content"
-      android:background="?attr/colorPrimary"
-      android:minHeight="?attr/actionBarSize"
-      android:theme="?attr/actionBarTheme"
-      tools:layout_editor_absoluteY="162dp"
-      tools:layout_editor_absoluteX="8dp"/>
-    
-    <FrameLayout
-      android:layout_width="0dp"
-      android:layout_height="146dp"
-      tools:layout_editor_absoluteY="8dp"
-      tools:layout_editor_absoluteX="8dp"/>
-      
-</android.support.constraint.ConstraintLayout>
+      android:layout_height="match_parent"
+      android:clickable="true">
+
+        <android.support.v7.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:background="@color/colorPrimary"
+          android:fitsSystemWindows="true"
+          android:minHeight="?attr/actionBarSize"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+          app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+        <FrameLayout
+          android:id="@+id/container"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    </android.support.constraint.ConstraintLayout>
+
 </android.support.v4.widget.DrawerLayout>
 
   <!-- search layout -->
@@ -71,7 +78,6 @@ android:visibility="gone">
               android:layout_height="48dp"
               android:layout_weight="1"
               android:background="@null"
-              android:hint="Search..."
               android:imeOptions="actionSearch"
               android:maxLines="1"
               android:paddingLeft="16dp"
@@ -82,8 +88,7 @@ android:visibility="gone">
             <ImageButton
               android:id="@+id/search_close_button"
               android:layout_width="48dp"
-              android:layout_height="match_parent"
-              android:background="@null"/>
+              android:layout_height="match_parent"/>
         
         </LinearLayout>
         
