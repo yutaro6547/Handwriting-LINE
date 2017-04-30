@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    
+    <android.support.v4.widget.DrawerLayout
+      android:id="@+id/drawer_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,14 +17,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.zukkey.handwriting_line.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
+    
+    
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="368dp"
+      android:layout_height="wrap_content"
+      android:background="?attr/colorPrimary"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="?attr/actionBarTheme"
+      tools:layout_editor_absoluteY="162dp"
+      tools:layout_editor_absoluteX="8dp"/>
+    
+    <FrameLayout
+      android:layout_width="0dp"
+      android:layout_height="146dp"
+      tools:layout_editor_absoluteY="8dp"
+      tools:layout_editor_absoluteX="8dp"/>
+      
 </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.DrawerLayout>
+
+  <!-- search layout -->
+<FrameLayout
+android:id="@+id/search_layout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fitsSystemWindows="true"
+android:visibility="gone">
+
+<android.support.v7.widget.CardView
+  android:id="@+id/search_card"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="8dp"
+  android:layout_marginLeft="16dp"
+  android:layout_marginRight="16dp"
+  android:layout_marginTop="8dp">
+    
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:animateLayoutChanges="true"
+      android:orientation="vertical">
+        
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+            
+            <EditText
+              android:id="@+id/searchview"
+              android:layout_width="0dp"
+              android:layout_height="48dp"
+              android:layout_weight="1"
+              android:background="@null"
+              android:hint="Search..."
+              android:imeOptions="actionSearch"
+              android:maxLines="1"
+              android:paddingLeft="16dp"
+              android:singleLine="true"
+              android:textSize="14sp"
+              tools:ignore="Deprecated"/>
+            
+            <ImageButton
+              android:id="@+id/search_close_button"
+              android:layout_width="48dp"
+              android:layout_height="match_parent"
+              android:background="@null"/>
+        
+        </LinearLayout>
+        
+        <android.support.v7.widget.RecyclerView
+          android:id="@+id/search_recyclerview"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingTop="1dp"/>
+    
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+</FrameLayout>
+
+</FrameLayout>
