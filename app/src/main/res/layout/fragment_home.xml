@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  
+  <FrameLayout
+    android:layout_width="0dp"
+    android:layout_height="0dp"/>
+  
+  <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    tools:ignore="UnusedAttribute">
+    
+    <ImageButton
+      android:id="@+id/account_button"
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:layout_height="match_parent"
+      android:background="@drawable/selector"
+      android:src="@drawable/ic_nav_account"/>
+  
+    <ImageButton
+      android:id="@+id/talk_button"
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:layout_height="match_parent"
+      android:background="@drawable/selector"
+      android:src="@drawable/ic_nav_talk"/>
+  
+    <ImageButton
+      android:id="@+id/timeline_button"
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:layout_height="match_parent"
+      android:background="@drawable/selector"
+      android:src="@drawable/ic_nav_timeline"/>
+  
+    <ImageButton
+      android:id="@+id/news_button"
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:layout_height="match_parent"
+      android:background="@drawable/selector"
+      android:src="@drawable/ic_nav_news"/>
+  
+    <ImageButton
+      android:id="@+id/settings_button"
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:layout_height="match_parent"
+      android:background="@drawable/selector"
+      android:src="@drawable/ic_nav_settings"/>
+    
+  </LinearLayout>
+  
+</android.support.constraint.ConstraintLayout>
