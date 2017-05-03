@@ -1,10 +1,11 @@
-package com.example.zukkey.handwriting_line.ui.activity
+package com.example.zukkey.handwriting_line.ui.activity.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.zukkey.handwriting_line.R
+import com.example.zukkey.handwriting_line.ui.activity.ui.fragment.BaseFragment
 
 /**
  * Created by YUTARO SUZUKI on 2017/05/03.

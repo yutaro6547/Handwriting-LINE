@@ -1,4 +1,4 @@
-package com.example.zukkey.handwriting_line.ui.activity
+package com.example.zukkey.handwriting_line.ui.activity.ui.activity
 
 import android.os.Bundle
 import android.os.PersistableBundle
