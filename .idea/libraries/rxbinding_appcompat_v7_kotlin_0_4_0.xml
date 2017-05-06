@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="rxbinding-appcompat-v7-kotlin-0.4.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/51210250aac0a3e51831ac4681d3dc0af32e0418/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/51210250aac0a3e51831ac4681d3dc0af32e0418/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/b8dfde0b6f9daa5fb5476e42a5b89ab1241a1291/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/b8dfde0b6f9daa5fb5476e42a5b89ab1241a1291/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
